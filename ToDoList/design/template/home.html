@@ -1,0 +1,24 @@
+{% load static %}
+
+<html lang="en-US">
+<head>
+    <meta charset = "UTF-8">
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/home_style.css' %}">
+    <script src="{% static 'js/home_style.js' %}"></script>
+    <title>Home of ToDoList</title>
+</head>
+
+
+<div id="myDIV" class="add_task" >
+  <input type="text" id="input_value" placeholder="Add task">
+  <span onclick="newElement()" class="add_button" > + </span>
+</div>
+
+<ul id="list">
+  <li> First task</li>
+  <li> More tasks </li>
+</ul>
+
+
+
+
