@@ -1,27 +1,15 @@
 /* Function that connect span button click and task note with updating the list*/
 function newElement(){
-  var li = document.createElement("li");               /* Copy the current HTML list */
-  var element = document.getElementById("input_value") /* Get the input value */
-  var text = document.createTextNode(element)          /* Convert the input value to text */
-  li.appendChild(text);   /* Add the test element to the list*/
+  var li = document.createElement("li");                        /* Create a new li element, I guees empty?*/
+  var element = document.getElementById("input_value").value;   /* Get the input value written in the box */
+  var text = document.createTextNode(element);                   /* Convert the input value to text */
+  li.appendChild(text);                                         /* Add the test element to the LI element*/
   if (element === "") {
     alert("You must write something!");
   } else {
-    document.getElementById("list").appendChild(li);
+    var ul = document.getElementById("task_list");              /* Get the current <ul> */
+    ul.appendChild(li);                                         /* add the <li> to the <ul> */
   }
-  document.getElementById("input_value").value = "";
-
-  var span = document.createElement("span");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
+  document.getElementById("input_value").value = "";            /* Assign the input_value to " " again*/
 
 }
