@@ -1,8 +1,54 @@
 /* Style for the Home Page */
 
-.add_task{
-
+/* ----------- Create the grid -------------------*/
+.wrapper{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 50px 200px 200px 50px;
+  grid-template-rows: 100px 100px 400px 100px;
+  grid-template-areas:
+    "head head head head"
+    "l_side tasker tasker r_side"
+    "l_side l_task r_task r_side"
+    "foot foot foot foot";
 }
+
+.head{
+  background: gray ;
+  grid-area: head;
+}
+.left_side{
+  background: gray ;
+  grid-area: l_side;
+}
+.add_task{
+  background: gray ;
+  grid-area: tasker;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_side{
+  background: gray ;
+  grid-area: r_side;
+}
+.left_task{
+  background: gray ;
+  grid-area: l_task;
+  text-align: center;
+}
+.right_task{
+  background: gray ;
+  grid-area: r_task;
+  text-align: center;
+}
+.footer{
+  background: gray;
+  grid-area: foot;
+}
+/* ----------- End of creating the grid -------------------*/
+
 
 /* Style the input box*/
 .input_box{
@@ -12,6 +58,43 @@
   border-width: 1px;
   font-size: 20px;
   padding: 5px;
+}
+
+/* Style the task list (left list) */
+ul.left_list{
+    list-style-type: none;
+    text-align: left;
+
+}
+ul.right_list{
+    list-style-type: none;
+}
+
+/* Include a circle to the left of list element */
+.list_circle{
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #FFFFFF;
+  border: 1px solid #000;
+  display:inline-block;
+}
+
+.checkmark{
+  display: none;
+}
+
+/*
+.list_circle:hover{
+  display: none;
+}
+
+.list_circle:hover + .checkmark{
+  display:inline-block;
+}
+*/
+.ul{
+  list-style: none;
 }
 
 /* Style the "Add" button */

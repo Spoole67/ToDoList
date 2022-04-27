@@ -8,16 +8,42 @@
     <title>Home of ToDoList</title>
 </head>
 
+<div class="wrapper">
+  <div class="head"> Head </div>
+  <div class="left_side"> left side </div>
 
-<div id="myDIV" class="add_task" >
-  <input type="text" id="input_value" placeholder="Add task">
-  <span onclick="newElement()" class="add_button" > + </span>
+  <!-- Add Task section -->
+  <div id="myDIV" class="add_task">
+    <span onclick="newElement()" class="add_button" > + </span>
+    <input type="text" id="input_value" placeholder="Add task" class="input_box">
+  </div>
+
+  <div class="right_side"> right side </div>
+
+  <!-- Left List section -->
+  <div class="left_task"> Unfinished Tasks
+    <ul id="task_list" class="left_list">
+      <!--
+      <li id="list_value">
+          <span onclick="endTask()" class="list_circle"></span>
+          <span class="checkmark"> &#10003; </span>
+          TASK
+      </li>
+      -->
+    </ul>
+  </div>
+
+  <!-- Right List section -->
+  <div class="right_task"> Finished tasks
+    <ul id="finished_task_list" class="right_list">
+    </ul>
+  </div>
+
+  <div class="footer"> footer </div>
+
 </div>
 
-<ul id="task_list">
-  <li> First task</li>
-  <li> More tasks </li>
-</ul>
+
 
 
 
